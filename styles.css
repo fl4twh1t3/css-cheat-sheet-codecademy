@@ -1,0 +1,100 @@
+header {
+    text-align: center;
+    background-color: rgb(104, 186, 241);
+    box-sizing: border-box;
+    margin: auto;
+    padding: 10px;
+}
+
+.box-model p {
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+
+}
+
+h3 {
+    width: 80%;
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+}
+
+.code {
+    font-family: monospace;
+    box-sizing: border-box;
+    background-color: rgb(141, 136, 136);
+    border: solid 1px rgb(53, 50, 50);
+    padding: 0 2px;
+    color: white;
+    border-radius: 5px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: solid 2px black;
+}
+
+caption {
+    caption-side: bottom;
+    margin: 10px auto;
+}
+
+thead {
+    background-color: rgb(104, 186, 241);
+}
+
+th, td {
+    border: solid 1px black;
+}
+
+#box-model-img {
+    display: block;
+    margin: auto;
+}
+
+.example1 {
+    position: relative;
+    margin: 20px;
+    text-align: center;
+}
+
+.example1 p{
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+}
+
+.example1 .result {
+    position: relative;
+    border: grey 1px solid;
+    margin: auto;
+    bottom: 6px;
+}
+
+.example2 {
+    position: relative;
+    margin: 20px;
+    text-align: center;
+}
+
+
+.example2 p {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+}
+
+.example2 .result {
+    position: relative;
+    border: grey 1px solid;
+    margin: auto;
+    bottom: 6px;
+}

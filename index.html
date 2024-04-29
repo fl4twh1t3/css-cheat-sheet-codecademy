@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS cheat sheet</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>CSS Cheat Sheet</h1>
+        </header>
+        <div class="box-model">
+            <h2>Box Model</h2>
+            <p> Each element on the web page is by default rendered as a box with set of properties.
+                The set of properties that define parts of an element is box model. <br>
+                <span class="code">Box-sizing</span> is a property that sets how the total width and 
+                height of an element is calculated. It has one of two values: 
+                <span class="code">content-box</span> (default) or <span class="code">border-box</span>.<br>
+                Before specifying how width and height properties differ in content-box and border-box cases 
+                let's get familiar with padding, border and margin.
+            </p>
+            <table>
+                <thead>
+                    <th scope="col">Property</th>
+                    <th scope="col">Meaning</th>
+                    <th scope="col">Value Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="raw">Padding</th>
+                        <td>The spacing between content of the element and its border. </td>
+                        <td>10px</td>
+                    </tr>
+                    <tr>
+                        <th scope="raw">Border</th>
+                        <td>The border of an element. Sets vallues for border-width, 
+                            border-style, and border-color.</td>
+                        <td>10px solid black</td>
+                    </tr>
+                    <tr>
+                        <th scope="raw">Margin</th>
+                        <td>The spacing between border of an element and another element.</td>
+                        <td>20px 40px</td>
+                    </tr>
+                </tbody>
+                <caption> (*) value of margin and padding can be set separetly for each side: top, right, bottom, left.
+                    Syntax consists of one, two or four vallues. One vallue is for all sides. When using two vallues - 
+                    first is for top and bottom, and second is for right and left side. When using four vallues - 
+                    one for each side in respacive order: top, right, bottom, left.
+                </caption>
+            </table>
+            <p> 
+                When using content-box we set width and height for content only. The width of any border 
+                and padding will be added to the final rendered width of an element.<br>
+                Border-box tells the browser to account for any border and padding in the values you 
+                specify for an element's width and height. So value putted for width and height 
+                properties will be actuall width and height of rendered element.<br>
+            </p>
+            <h3>Example:</h3>
+            <div class="example1">
+                <p class="code">
+                    .element1 {<br>
+                        box-sizing: content-box;<br>
+                        width: 400px;<br>
+                        height: 600px;<br>
+                        border: 2px solid black;<br>
+                        padding: 4px;<br>
+                        margin: 10px 20px;<br>
+                    }
+                </p>
+                <p class="result">
+                    The total rendered height of the element1 will be 600(content height) + 4(top padding) 
+                    + 4(bottom padding) + 2*2(top and bottom border) = 612 (px). 
+                </p>
+            </div>
+            <div class="example2">
+                <p class="code">
+                    .element2 {<br>
+                        box-sizing: border-box;<br>
+                        width: 400px;<br>
+                        height: 600px;<br>
+                        border: 2px solid black;<br>
+                        padding: 4px;<br>
+                        margin: 10px 20px;<br>
+                    }
+                </p>
+                <p class="result">
+                    The total rendered height of the element1 will be 600px. Content height is calculated:
+                    600 - 4*2(top and bottom padding) - 2*2(top and bottom border) = 588 (px).
+                </p>
+            </div>
+            <img id="box-model-img" height="400px" src="./resources/box model scheme.png" alt="Box model scheme">
+        </div>
+    </body>
+</html>
+
